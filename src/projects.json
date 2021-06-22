@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Giffer",
+    "description": "It's a simple and fun application that allows you to make gifs using your own camera. Get goofy and have fun! :)",
+    "image": "/assets/giffer-screenshot.png",
+    "showType": 1,
+    "link": "https://gif-fer.firebaseapp.com",
+    "techStacks": ["React", "Webpack", "PassportJS", "Express", "PWA", "Firebase"]
+  }
+]

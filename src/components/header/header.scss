@@ -1,0 +1,42 @@
+$accent: #ee3153;
+#header {
+  height: 80px;
+  display: flex;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
+  #header-left {
+    width: 50%;
+    display: flex;
+    .header-link {
+      margin-top: 30px;
+      margin-left: 35px;
+      font-family: Cerebri,Helvetica,Arial,sans-serif;;
+      font-weight: bold;
+      font-size: 13px;
+      transition: color .3s ease-in;
+      color: #ee3153;
+      cursor: pointer;
+      letter-spacing: 3px;
+    
+    }
+  }
+  #header-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    .header-social-icon {
+      width: 20px;
+      height: 20px;
+      margin-top: 30px;
+      margin-right: 45px;
+      cursor: pointer;
+    }
+  }
+}
+.header-link:hover {
+  color: goldenrod !important;  
+}
+

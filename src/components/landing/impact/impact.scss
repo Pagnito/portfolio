@@ -1,0 +1,51 @@
+#impact-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    display: none;
+    .impact-swing-door-container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      #impact-swing-door-dark-overlay {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        background-color: rgba(0,0,0,.4);
+        animation: fade-dark-overlay .7s ease-out 1.7s forwards;
+      }
+      .impact-swing-door-left {
+        animation: close-sesame 1s ease-in-out forwards;
+        width: 0%;
+        height: 100vh;
+        position: absolute;
+      }
+      .impact-swing-door-right {
+        animation: close-sesame 1s ease-in-out forwards;
+        width: 0%;
+        height: 100vh;
+        right: 0;
+ 
+        position: absolute;
+      }
+      .impact-door-one {
+        background-color: white;
+      }
+    }
+}
+@keyframes close-sesame {
+  100% {
+    width: 50%;
+  }
+}
+@keyframes close-sesame-right {
+  100% {
+  }
+}

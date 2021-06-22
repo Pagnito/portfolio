@@ -1,0 +1,22 @@
+{
+  "colorSchemes": {
+    "arctic": {
+      "background": "#f1f1f2",
+      "links": "#bcbabe",
+      "accent": "#a1d6e2",
+      "main": "#1995ad"
+    },
+    "dayAndNight": {
+      "background": "#063852",
+      "links": "#011a27",
+      "accent": "#f0810f",
+      "main": "#e6df44"
+    },
+    "fire":{
+      "background": "#white",
+      "links": "gray",
+      "main": "#EC6024",
+      "accent": "#EE3153"
+    }
+  }
+}

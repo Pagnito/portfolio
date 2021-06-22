@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Baloo+Tammudu+2:wght@500&family=Julius+Sans+One&family=Poiret+One&family=Poppins:wght@500&display=swap');
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x:hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8A2BE2;
+}
