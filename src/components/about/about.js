@@ -1,34 +1,40 @@
 import React, { useEffect } from "react";
 import "./about.scss";
 
-const About = () => {
-  
+const About = ({ reference }) => {
   return (
-    <section id="about-section">
-      <div id="about-section-content">
-        <div id="video-container-1">
-          <video id="video-1" autoPlay muted loop>
-            <source src="/assets/tech.mp4" type="video/mp4" autoPlay />
-          </video>
+    <div ref={reference} id="about-section">
+      <section className="about-slide-container">
+      <div className="about-slide about-image-container">
+          <div className="about-slide-stage-two-image"></div>
         </div>
-        <div id="about-section-middle-line"></div>
-
-        <section id="solution-text">
-          <div className="words word-1">
-            <span>S</span>
-            <span>O</span>
-            <span>L</span>
-            <span>U</span>
-            <span>T</span>
-            <span>I</span>
-            <span>O</span>
-            <span>N</span>
-            <span>S</span>
+        <div className="about-slide about-text-container">
+          <div className="about-slide-stage-two-text">
+            <div id="name-title">P<span style={{marginLeft: '-15px'}}>Y</span></div>
+            <div className="about-text about-text-one">
+            As you know by now I am Pavel. I live in providence Rhode Island,
+            but I think I am a nomad at heart.</div>
+            <div className="about-text about-text-two">
+            I know how to work with both
+            backend and front end code. I primarily work with <span style={{color: 'lightgreen'}}>NodeJS</span> and <span style={{color: '#4287f5'}}>React</span>, but I have worked with
+            <span style={{color: 'goldenrod'}}> Java</span> and <span style={{color: 'blue'}}>Python</span> when the need came. I really like creating impactful apps
+            and sites. If I can show my work to someone and hear them say <span style={{color:"#ee3153"}}>"Oh
+            wow"</span>, then I am very happy :)
+            </div>
+            <div className="about-text about-text-three">
+            I currently work for <span style={{color: 'red'}}>CVS</span> as a backend engineer supporting inventory and different order fulfilment systems.
+            </div>
+            <div className="about-text about-text-four">
+                On my free time I like to ride my motorcycle, or electric longboard, hang out with friends and make love to music...ugh ugh I meant make music. 
+            </div>
+            <a href="/assets/portrait.jpg" download="portrait.jpg">
+              <button id="resume-button">Download Resume</button>
+            </a>
           </div>
-        </section>
-        <img src="/assets/scroll-icon.svg" id="scroll-icon" />
-      </div>
-    </section>
+        </div>
+        
+      </section>
+    </div>
   );
 };
 export default About;

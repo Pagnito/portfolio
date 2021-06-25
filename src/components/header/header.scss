@@ -7,6 +7,8 @@ $accent: #ee3153;
   top: 0px;
   width: 100%;
   z-index: 100;
+  transform: translateY(-100%);
+  animation: slide-down 1s ease-out 3.2s forwards;
   #header-left {
     width: 50%;
     display: flex;
@@ -40,3 +42,8 @@ $accent: #ee3153;
   color: goldenrod !important;  
 }
 
+@keyframes slide-down {
+  100% {
+    transform: translateY(0%);
+  }
+}

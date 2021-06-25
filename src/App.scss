@@ -1,10 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Baloo+Tammudu+2:wght@500&family=Julius+Sans+One&family=Poiret+One&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap&family=Rubik+Mono+One&display=swap');
 body {
   margin: 0px;
   padding: 0px;
-  overflow-x:hidden;
+  overflow:hidden;
 }
-
+a {
+  text-decoration: none;
+}
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -24,3 +38,26 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #8A2BE2;
 }
+
+
+.drop-exit {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 2500ms ease-in-out;
+}
+
+.drop-exit-active {
+  opacity: 0
+}
+.drop-enter {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+}
+

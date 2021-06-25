@@ -1,4 +1,6 @@
 {
+  "components": ["home", "about", "projects", "contact"],
+  "projects": ["giffer"],
   "colorSchemes": {
     "arctic": {
       "background": "#f1f1f2",
