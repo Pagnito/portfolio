@@ -15,31 +15,63 @@ $accent: #ee3153;
     .header-link {
       margin-top: 30px;
       margin-left: 35px;
-      font-family: Cerebri,Helvetica,Arial,sans-serif;;
+      font-family: Cerebri, Helvetica, Arial, sans-serif;
       font-weight: bold;
       font-size: 13px;
-      transition: color .3s ease-in;
-      color: #ee3153;
+      transition: color 0.3s ease-in;
+   
       cursor: pointer;
       letter-spacing: 3px;
-    
     }
   }
   #header-right {
     width: 50%;
     display: flex;
     justify-content: flex-end;
-    .header-social-icon {
-      width: 20px;
-      height: 20px;
+    #header-icon-container {
       margin-top: 30px;
-      margin-right: 45px;
-      cursor: pointer;
+      margin-right: 25px;
+      width: 180px;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      .link-animation-container:hover .social-icon-face {
+        transform: translateY(-30px);
+        transition: all .3s ease-out;
+      }
+      .link-animation-container:hover .social-icon-bottom {
+        transform: translateY(0px) translateX(-20px);
+        transition: all .3s ease-out;
+      }
+      .link-animation-container {
+
+        .header-social-icon-link {
+          //position: absolute;
+          cursor: pointer;
+          display: inline-block;
+          //right: 0;
+        
+          .header-social-icon {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      .social-icon-face {
+        transition: all .3s ease-out;
+      }
+      .social-icon-bottom {
+        position: relative;
+        display: inline-block;
+        transform: translateY(30px) translateX(-20px);
+        transition: all .3s ease-out;
+      }
     }
   }
 }
 .header-link:hover {
-  color: goldenrod !important;  
+  color: goldenrod !important;
 }
 
 @keyframes slide-down {

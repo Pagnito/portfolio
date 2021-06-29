@@ -1,73 +1,201 @@
 #contact-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  #contact-video-container {
+    background-color: white;
+    overflow: hidden;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    display: none;
+    #contact-video {
+      height: 100vh;
+      opacity: 0.7;
+    }
+  }
+  .contact-swing-door-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    top: 0px;
+    left: 0px;
     position: absolute;
-    top: 0;
-    overflow:hidden;
-    #contact-video-container {
-      background-color: white;
-      overflow: hidden;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      position: fixed;
-      left: 0;
+    .contact-swing-door-left {
+      animation: close-sesame 1s ease-in-out forwards;
+      width: 0%;
       height: 100vh;
-      display: none;
-      #contact-video {
-        height:100vh;
-        opacity: .7;
-      }
-    }
-    .contact-swing-door-container {
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      top: 0px;
-      left: 0px;
       position: absolute;
-      .contact-swing-door-left {
-        animation: close-sesame 1s ease-in-out forwards;
-        width: 0%;
-        height: 100vh;
-        position: absolute;
-        box-shadow: 5px 0px 20px 0px rgba(0,0,0,.2);
-      }
-      .contact-swing-door-right {
-        animation: close-sesame 1s ease-in-out forwards;
-        width: 0%;
-        height: 100vh;
-        right: 0;
-        position: absolute;
-        box-shadow: -5px 0px 20px 0px rgba(0,0,0,.2);
-      }
-      .contact-door-one {  
-        background-color: white//#E2E4DE;
-      }
+      box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, 0.2);
     }
-    #contact-info-container {
+    .contact-swing-door-right {
+      animation: close-sesame 1s ease-in-out forwards;
+      width: 0%;
+      height: 100vh;
+      right: 0;
+      position: absolute;
+      box-shadow: -5px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    }
+    .contact-door-one {
+      background-color: white//#E2E4DE;
+    }
+  }
+  #contact-animation-two {
+    width: 0%;
+    height: 60vh;
+    background-color: #ee3153;
+    position: absolute;
+    width: 0px;
+    animation: expand-width 1s ease-in-out forwards 0.7s;
+    display: flex;
+    justify-content: center;
+    #contact-animation-two-inner {
       width: 0%;
       height: 60vh;
-      background-color: #ee3153;
+      background-color: white;
       position: absolute;
       width: 0px;
-      animation: expand-width 1s ease-in-out forwards .7s;
+      animation: expand-width-inner 1s ease-in-out forwards 1.5s;
+    }
+  }
+  #contact-info-n-form {
+    width: 60%;
+    height: 60vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Benne", serif;
+    animation: appear-contact 1s ease-out forwards 2.4s;
+    transform: translateY(-10px);
+    opacity: 0;
+    #contact-info {
+      width: 100%;
+      justify-content: space-between;
       display: flex;
-      justify-content: center;
-      #contact-info-container-inner {
-        width: 0%;
-        height: 60vh;
-        background-color: white;
-        position: absolute;
-        width: 0px;
-        animation: expand-width-inner 1s ease-in-out forwards 1.5s;
+      #contact-email {
+        #contact-email-title {
+          color: #ee3153;
+          opacity: 0.7;
+          font-size: 2.5vh;
+        }
+        #contact-email-text {
+          font-size: 5vh;
+        }
+      }
+      #contact-phone {
+        #contact-phone-title {
+          color: #ee3153;
+          opacity: 0.7;
+          font-size: 2.5vh;
+        }
+        #contact-phone-text {
+          font-size: 5vh;
+        }
       }
     }
+    #contact-form-container {
+      width: 100%;
+      height: 4vw;
+      .contact-form-title {
+        margin-left: 10px;
+        margin-bottom: 15px;
+        font-size: 3vh;
+        opacity: 0;
+        transform: translateY(-120%);
+        position: absolute;
+        margin-top: -40px;
+        animation: slide-contact-form-title .4s ease-out .2s forwards;
+      }
+   
+
+      .contact-form {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: transparent;
+        font-size: 4vh;
+        padding-left: 10px;
+        padding-bottom: 0px !important;
+        font-family: "Benne", serif;
+        line-height: 3vw;
+        //position: absolute;
+        outline: none;
+      }
+      .contact-form-message {
+        animation: expand-contact-form-message .4s ease-out forwards;
+        height: 0vh;
+        resize: none;
+      }
+      #contact-form:focus {
+        outline: none;
+      }
+      #contact-form-arrow {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        opacity: 0.6;
+        margin-top: -55px;
+        right: -10px;
+        transition: all 1s ease-out;
+        cursor: pointer;
+      }
+      #contact-form-arrow:hover{
+        transform: scale(1.2)
+      }
+      #contact-form-counter {
+        position: absolute;
+        right: -15px;
+        opacity: 0.6;
+        margin-top: 10px;
+        font-size: 1.5vh;
+        font-family: Cerebri, Helvetica, Arial, sans-serif;
+        letter-spacing: 10px;
+      }
+    }
+  }
 }
 
+
+
+.contactFormInputAni-exit {
+  opacity: 1;
+  transition: opacity 1000ms ease-out;
+}
+
+.contactFormInputAni-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms ease-out;
+}
+
+
+@keyframes expand-contact-form-message {
+  100% {
+    height:20vh;
+  }
+}
+@keyframes slide-contact-form-title {
+  100% {
+    transform: translateY(0%);
+    opacity: .6;
+  }
+} 
+
+@keyframes appear-contact {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 @keyframes expand-width {
   100% {
     width: 70%;
@@ -81,7 +209,6 @@
 @keyframes close-sesame {
   100% {
     width: 50%;
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.0);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
   }
 }
-

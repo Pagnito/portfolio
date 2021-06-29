@@ -5,6 +5,7 @@ import Landing from "./components/landing/landing";
 import { Route, withRouter, useLocation, Switch } from "react-router-dom";
 import About from "./components/about/about";
 import Footer from "./components/footer/footer";
+import Projects from "./components/projects/projects";
 import Contact from "./components/contact/contact";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
@@ -17,17 +18,9 @@ const App = (props) => {
         <CSSTransition key={location.key} classNames="drop" unmountOnExit timeout={2000}>
           <Switch location={location}>
             <Route exact path="/" render={(props) => <Landing {...props} />} />
-            <Route
-             exact
-              path="/about"
-              render={(props) => <About {...props} />}
-            />
-
-            <Route
-              exact
-              path="/contact"
-              render={(props) => <Contact {...props} />}
-            />
+            <Route exact path="/about" render={(props) => <About {...props} />} />
+            <Route exact path="/projects" render={(props) => <Projects {...props} />} />
+            <Route exact path="/contact" render={(props) => <Contact {...props} />} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>

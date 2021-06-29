@@ -63,7 +63,7 @@ const config = {
     extensions: [".js", ".jsx"],
   },
   plugins: [
-    new CopyPlugin({ patterns: [{ from: "./src/assets", to: "./src/assets" }] }),
+    new CopyPlugin({ patterns: [{ from: "./src/assets", to: "./assets" }] }),
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
     new BundleAnalyzerPlugin({
       analyzerMode: "static",

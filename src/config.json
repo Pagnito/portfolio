@@ -1,6 +1,7 @@
 {
   "components": ["home", "about", "projects", "contact"],
   "projects": ["giffer"],
+  "emailjs_user_id": "user_7TRpE1ETxxdlRHzpPATZ1",
   "colorSchemes": {
     "arctic": {
       "background": "#f1f1f2",
