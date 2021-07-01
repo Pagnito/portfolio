@@ -5,7 +5,7 @@
   height: 80px;
   animation: slide-up 1s ease-out 3.2s forwards;
   transform: translateY(80px);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   #scroll-icon {
     position: absolute;

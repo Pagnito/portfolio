@@ -18,14 +18,14 @@
       width: 50%;
       height: 0%;
       background-color: #ee3153;
-      animation: about-slide 0.6s ease-in-out forwards 0.8s;
+      animation: about-slide 0.6s ease-in-out forwards 0.3s;
       .about-slide-stage-two-text {
         background-color: white;
         height: 0%;
         width: 50%;
         position: absolute;
         top: 0;
-        animation: about-slide 0.6s ease-in-out forwards 1.4s;
+        animation: about-slide 0.6s ease-in-out forwards .9s;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -77,7 +77,7 @@
       height: 0%;
       background-color: #8a2be2;
       align-self: flex-end;
-      animation: about-slide 0.6s ease-in-out forwards 0.5s;
+      animation: about-slide 0.6s ease-in-out forwards 0s;
       .about-slide-stage-two-image {
         background-image: url("/src/assets/portrait.jpg");
         background-position: center;
@@ -87,7 +87,7 @@
         width: 50%;
         position: absolute;
         bottom: 0;
-        animation: about-slide 0.6s ease-in-out forwards 1.8s;
+        animation: about-slide 0.6s ease-in-out forwards 1.3s;
         overflow: hidden;
       }
     }
