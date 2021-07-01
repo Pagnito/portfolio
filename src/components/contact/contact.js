@@ -73,7 +73,7 @@ const Contact = ({ reference, scrolled }) => {
                 Email
               </div>
               <input
-              autoFocus
+                autoFocus
                 onKeyPress={nextInputOnEnter}
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
@@ -92,7 +92,7 @@ const Contact = ({ reference, scrolled }) => {
             Subject
           </div>
           <input
-          autoFocus
+            autoFocus
             onKeyPress={nextInputOnEnter}
             onChange={(e) => setSubject(e.target.value)}
             value={subject}
@@ -109,7 +109,7 @@ const Contact = ({ reference, scrolled }) => {
             Message
           </div>
           <textarea
-          autoFocus
+            autoFocus
             onKeyPress={nextInputOnEnter}
             onChange={(e) => setMessage(e.target.value)}
             value={message}

@@ -70,12 +70,108 @@ $accent: #ee3153;
     }
   }
 }
+
+#header-mobile {
+  #burger-menu-icon {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 101;
+    top: 10px;
+    right: 10px;
+  }
+  #header-mobile-menu {
+    width: 0%;
+    height: 102vh;
+    right: 0;
+    position: fixed;
+    background-color: #333399;
+    transition: width .5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+ 
+    #header-mobile-links {
+      font-family: Cerebri, Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      color: white;
+      font-size: 35px;
+      height: 20vh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: calc(100vh - 160px);
+      transform: translateY(-10px);
+      opacity: 0;
+      //animation: appear-mobile-menu-links .4s ease-out .5s forwards;
+      display: none;
+      transition: opacity .4s ease-in-out;
+     .header-mobile-link {
+      margin-top: 20px
+     }
+    }
+    #header-mobile-social-links {
+      align-self: flex-end;
+      height: 130px;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      transform: translateY(-10px);
+      opacity: 0;
+      //animation: appear-mobile-menu-links .4s ease-out .5s forwards;
+      display: none;
+      transition: all .4s ease-in-out;
+      .header-mobile-social-icon {
+        width: 20px;
+        height: 20px;
+        margin: 12px;
+      }
+    }
+  }
+}
+.open-mobile-menu {
+  width: 100% !important;
+  z-index: 100;
+}
+.close-mobile-menu {
+  width: 0% !important;
+  z-index: 100;
+}
 .header-link:hover {
   color: goldenrod !important;
 }
 
+
 @keyframes slide-down {
   100% {
     transform: translateY(0%);
+  }
+}
+@keyframes dissappear-mobile-menu-links {
+  100%{
+    opacity: 0;
+    transform: translateY(-10px)
+  }
+}
+@keyframes appear-mobile-menu-links {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@media (max-width:800px) {
+  #header {
+    display: none;
+  }
+}
+@media (min-width:801px) {
+  #header-mobile {
+    display: none;
   }
 }
