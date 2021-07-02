@@ -12,6 +12,13 @@ $accent: #ee3153;
   #header-left {
     width: 50%;
     display: flex;
+    #header-link-bg-ani {
+      height: 40px;
+      width: 100%;
+    }
+    #ko {
+      color: black !important;
+    }
     .header-link {
       margin-top: 30px;
       margin-left: 35px;
@@ -19,7 +26,7 @@ $accent: #ee3153;
       font-weight: bold;
       font-size: 13px;
       transition: color 0.3s ease-in;
-   
+      color: #EE3153 !important;
       cursor: pointer;
       letter-spacing: 3px;
     }

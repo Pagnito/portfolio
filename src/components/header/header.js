@@ -1,5 +1,6 @@
 import React, { createRef, useState } from "react";
 import { Link, withRouter } from "react-router-dom";
+import BurgerMenuIcon from "./burderMenuIcon/burgerMenuIcon";
 import "./header.scss";
 
 const Header = (props) => {
@@ -13,29 +14,27 @@ const Header = (props) => {
     mobileMenu.current.classList.add("close-mobile-menu");
     mobileMenu.current.classList.remove("open-mobile-menu");
     let links = Array.from(mobileMenu.current.children);
-    links.forEach(child => {
-      child.style.opacity = '0';
+    links.forEach((child) => {
+      child.style.opacity = "0";
     });
-    setTimeout(()=>{
-      links.forEach(child => {
-        child.style.display = 'none';
+    setTimeout(() => {
+      links.forEach((child) => {
+        child.style.display = "none";
       });
-    },500)
-    
+    }, 500);
   }
   function openMenu() {
     mobileMenuIsOpen = true;
     document.body.style.overflow = "hidden";
     mobileMenu.current.classList.remove("close-mobile-menu");
     mobileMenu.current.classList.add("open-mobile-menu");
-    let links = Array.from(mobileMenu.current.children)
-    links.forEach(child => {
-      child.style.display = 'flex';
-      setTimeout(()=>{
-        child.style.opacity = '1';
-      }, 500)
-    
-    })
+    let links = Array.from(mobileMenu.current.children);
+    links.forEach((child) => {
+      child.style.display = "flex";
+      setTimeout(() => {
+        child.style.opacity = "1";
+      }, 500);
+    });
   }
   function openMobileMenu() {
     if (mobileMenuIsOpen) {
@@ -60,15 +59,21 @@ const Header = (props) => {
     <>
       <header id="header">
         <section id="header-left">
-          <div style={{ color: onProjectsView ? "white" : "#ee3153" }} className="header-link">
-            <Link to="/about">ABOUT</Link>
-          </div>
-          <div style={{ color: onProjectsView ? "white" : "#ee3153" }} className="header-link">
-            <Link to="/projects">PROJECTS</Link>
-          </div>
-          <div style={{ color: onProjectsView ? "white" : "#ee3153" }} className="header-link">
-            <Link to="/contact">CONTACT</Link>
-          </div>
+          <Link id="ko" to="/about">
+       
+            <div className="header-link">
+              ABOUT
+
+              </div>
+          </Link>
+
+          <Link to="/projects">
+            <div className="header-link">PROJECTS </div>
+          </Link>
+
+          <Link to="/contact">
+            <div className="header-link">CONTACT </div>
+          </Link>
         </section>
         <section id="header-right">
           <div id="header-icon-container">
@@ -100,7 +105,8 @@ const Header = (props) => {
         </section>
       </header>
       <header id="header-mobile">
-        <img onClick={openMobileMenu} src="/assets/burger-menu-icon.svg" id="burger-menu-icon" />
+        {/* <img onClick={openMobileMenu} src="/assets/burger-menu-icon.svg" id="burger-menu-icon" /> */}
+        <BurgerMenuIcon openMenu={openMobileMenu} />
         <div ref={mobileMenu} id="header-mobile-menu">
           <div id="header-mobile-links">
             <div className="header-mobile-link" onClick={pushToAbout}>

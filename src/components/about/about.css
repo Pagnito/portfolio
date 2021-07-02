@@ -3,7 +3,7 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   display: flex;
   /* overflow: hidden; */
@@ -32,7 +32,7 @@
 
 }
 .about-slide-stage-two-image {
-  background-image: url("/src/assets/portrait.jpg");
+  background-image: url("/src/assets/me.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

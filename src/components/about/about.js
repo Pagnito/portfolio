@@ -7,7 +7,7 @@ const About = () => {
   let rendered=false;
   useEffect(() => {
     if(!rendered){
-      window.scrollTo(0, 0);
+      //window.scrollTo(0, 0);
       let width = window.innerWidth;
       setTimeout(() => {
         if(width < 601) {
