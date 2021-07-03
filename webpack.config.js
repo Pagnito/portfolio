@@ -64,7 +64,7 @@ const config = {
   },
 
   plugins: [
-    new CopyPlugin({ patterns: [{ from: "./assets", to: "./assets" }] }),
+    new CopyPlugin({ patterns: [{ from: "./assets", to: "./assets" },{ from: "./_redirects", to: "./" }] }),
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
     new CompressionWebpackPlugin(),
     new BundleAnalyzerPlugin({
