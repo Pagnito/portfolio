@@ -87,7 +87,7 @@
         #contact-email-title {
           color: #ee3153;
           opacity: 0.7;
-          font-size: 20px;
+          font-size: 25px;
         }
         #contact-email-text {
           font-size: 50px;
@@ -97,7 +97,7 @@
         #contact-phone-title {
           color: #ee3153;
           opacity: 0.7;
-          font-size: 20px;
+          font-size: 25px;
         }
         #contact-phone-text {
           font-size: 50px;
@@ -109,9 +109,8 @@
       height: 4vw;
       
       .contact-form-title {
-        margin-left: 10px;
         margin-bottom: 15px;
-        font-size: 3vh;
+        font-size: 30px;
         opacity: 0;
         transform: translateY(-120%);
         position: absolute;
@@ -124,11 +123,11 @@
         border: none;
         border-bottom: 2px solid black;
         background-color: transparent;
-        font-size: 4vh;
+        font-size: 30px;
+        height: 50px;
         padding-left: 10px;
         padding-bottom: 0px !important;
         font-family: "Benne", serif;
-        line-height: 3vw;
         //position: absolute;
         outline: none;
       }
@@ -161,7 +160,7 @@
         right: -15px;
         opacity: 0.6;
         margin-top: 10px;
-        font-size: 1.5vh;
+        font-size: 15px;
         font-family: Cerebri, Helvetica, Arial, sans-serif;
         letter-spacing: 10px;
       }
@@ -220,6 +219,12 @@
   }
 }
 
+@keyframes expand-width-mobile {
+  100% {
+    width: 80%;
+  }
+}
+
 @keyframes close-sesame {
   100% {
     width: 50%;
@@ -251,6 +256,9 @@
     width: 80% !important;
     height: 80vh !important;
   }
+  #contact-animation-two {
+    animation: expand-width-mobile 1s ease-in-out forwards 0.7s !important;
+  }
 }
 
 @media (max-width: 750px) {
@@ -259,6 +267,9 @@
   }
   #contact-phone {
     margin-top: 40px;
+  }
+  #contact-info-n-form {
+    height: 45vh !important;
   }
 }
 
@@ -278,5 +289,14 @@
     #contact-phone-text {
       font-size: 25px !important;
     }
+  }
+  .contact-form-title {
+    margin-bottom: 5px !important;
+    margin-top: -15px !important;
+    font-size: 20px !important;
+  }
+  .contact-form {
+    font-size: 20px !important;
+    height: 35px !important;
   }
 }
