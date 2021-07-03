@@ -17,7 +17,6 @@ const Contact = ({ reference, scrolled }) => {
 
   let [formCounter, setFormCounter] = useState(1);
 
-
   function sendEmail() {
     const templateParams = {
       name: name,
@@ -103,16 +102,28 @@ const Contact = ({ reference, scrolled }) => {
               <div key={formCounter} className="contact-form-title">
                 Name
               </div>
-              <input
-                autoFocus
-                onKeyPress={nextInputOnEnter}
-                onChange={(e) => setName(e.target.value)}
-                value={name}
-                key={formCounter + 1}
-                className="contact-form contact-form-name"
-                type="text"
-                placeholder={nameError}
-              />
+              {window.innerWidth > 750 ? (
+                <input
+                  autoFocus
+                  onKeyPress={nextInputOnEnter}
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                  key={formCounter + 1}
+                  className="contact-form contact-form-name"
+                  type="text"
+                  placeholder={nameError}
+                />
+              ) : (
+                <input
+                  onKeyPress={nextInputOnEnter}
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                  key={formCounter + 1}
+                  className="contact-form contact-form-name"
+                  type="text"
+                  placeholder={nameError}
+                />
+              )}
             </>
           </CSSTransition>
         </>
