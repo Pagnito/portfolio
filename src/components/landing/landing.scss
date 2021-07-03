@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  
+
   .intro-text {
     font-family: "Rubik Mono One", sans-serif;
     font-size: 6vw;
@@ -20,8 +20,8 @@
     animation: appear-landing-text 1s ease-in-out 4s forwards;
     transform: translateY(-20px);
   }
-  
-  .pavel-word{
+
+  .pavel-word {
     display: inline-block;
     animation: appear-landing-text 1s ease-in-out 3s forwards !important;
   }
@@ -52,7 +52,7 @@
     top: 0px;
     left: 0px;
     position: absolute;
-   
+
     .swing-door-left {
       animation: open-sesame-left 1s ease-in-out forwards;
       width: 50%;
@@ -91,7 +91,7 @@
     animation-delay: 1s;
   }
   .swing-door-container div:nth-child(3) {
-    animation-delay: .7s;
+    animation-delay: 0.7s;
   }
   .swing-door-container div:nth-child(4) {
     animation-delay: 0.7s;
@@ -105,7 +105,7 @@
 }
 
 @keyframes appear-landing-text {
-  100%{
+  100% {
     transform: translateY(0px);
     opacity: 1;
   }
@@ -232,7 +232,6 @@
   // 100% {
   //   transform: translateY(0px) scale(100);
   // }
-  
 }
 @keyframes explode {
   100% {
@@ -247,5 +246,19 @@
 @keyframes open-sesame-right {
   100% {
     transform: translate(210%);
+  }
+}
+
+
+
+@media (max-width: 750px) {
+  .intro-text {
+    font-size: 45px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro-text {
+    font-size: 35px !important;
   }
 }

@@ -12,24 +12,72 @@ $accent: #ee3153;
   #header-left {
     width: 50%;
     display: flex;
-    #header-link-bg-ani {
-      height: 40px;
-      width: 100%;
+    .header-link-container {
+      margin-left: 25px;
+      margin-top: 25px;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .header-link-ani {
+        overflow:hidden;
+        position: absolute;
+        height: 0%;
+        width: 100%;
+        font-size: 13px;
+        color: white;
+        font-family: Cerebri, Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        letter-spacing: 3px;
+        //opacity: 0;
+        transition: height .5s ease-out;
+      }
+      .header-link-ani-2 {
+        overflow: hidden;
+        position: absolute;
+        height: 0%;
+        width: 100%;
+        font-size: 13px;
+        color: #8a2be2;
+        font-weight: bold;
+        font-family: Cerebri, Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 3px;
+        //opacity: 0;
+        transition: height .5s ease-out .4s;
+      }
+  
+      .header-link {
+        font-family: Cerebri, Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        transition: color 0.3s ease-in;
+        //color: #ee3153 !important;
+        cursor: pointer;
+        letter-spacing: 3px;
+      }
+      // .header-link-ani-2:hover {
+      //   animation: flashing 1s ease-out infinite;;
+      // }
+     
+      
     }
-    #ko {
-      color: black !important;
+    .header-link-container:hover .header-link-ani {
+      //animation: flashing .6s ease-out infinite;;
+      height: 100%;
     }
-    .header-link {
-      margin-top: 30px;
-      margin-left: 35px;
-      font-family: Cerebri, Helvetica, Arial, sans-serif;
-      font-weight: bold;
-      font-size: 13px;
-      transition: color 0.3s ease-in;
-      color: #EE3153 !important;
-      cursor: pointer;
-      letter-spacing: 3px;
+    .header-link-container:hover .header-link-ani-2 {
+      //animation: flashing-two .6s ease-out infinite;;
+      height: 100%;
     }
+   
   }
   #header-right {
     width: 50%;
@@ -45,20 +93,19 @@ $accent: #ee3153;
       overflow: hidden;
       .link-animation-container:hover .social-icon-face {
         transform: translateY(-30px);
-        transition: all .3s ease-out;
+        transition: all 0.3s ease-out;
       }
       .link-animation-container:hover .social-icon-bottom {
         transform: translateY(0px) translateX(-20px);
-        transition: all .3s ease-out;
+        transition: all 0.3s ease-out;
       }
       .link-animation-container {
-
         .header-social-icon-link {
           //position: absolute;
           cursor: pointer;
           display: inline-block;
           //right: 0;
-        
+
           .header-social-icon {
             width: 20px;
             height: 20px;
@@ -66,13 +113,13 @@ $accent: #ee3153;
         }
       }
       .social-icon-face {
-        transition: all .3s ease-out;
+        transition: all 0.3s ease-out;
       }
       .social-icon-bottom {
         position: relative;
         display: inline-block;
         transform: translateY(30px) translateX(-20px);
-        transition: all .3s ease-out;
+        transition: all 0.3s ease-out;
       }
     }
   }
@@ -93,13 +140,13 @@ $accent: #ee3153;
     right: 0;
     position: fixed;
     background-color: #333399;
-    transition: width .5s ease-in-out;
+    transition: width 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
- 
+
     #header-mobile-links {
       font-family: Cerebri, Helvetica, Arial, sans-serif;
       font-weight: bold;
@@ -115,10 +162,23 @@ $accent: #ee3153;
       opacity: 0;
       //animation: appear-mobile-menu-links .4s ease-out .5s forwards;
       display: none;
-      transition: opacity .4s ease-in-out;
-     .header-mobile-link {
-      margin-top: 20px
-     }
+      transition: opacity 0.4s ease-in-out;
+      .header-mobile-link {
+        margin-top: 20px;
+      }
+      #header-eye-icon {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 25px;
+      }
+      #header-eyeball-icon {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 25px;
+        cursor: pointer;
+      }
     }
     #header-mobile-social-links {
       align-self: flex-end;
@@ -133,7 +193,7 @@ $accent: #ee3153;
       opacity: 0;
       //animation: appear-mobile-menu-links .4s ease-out .5s forwards;
       display: none;
-      transition: all .4s ease-in-out;
+      transition: all 0.4s ease-in-out;
       .header-mobile-social-icon {
         width: 20px;
         height: 20px;
@@ -154,6 +214,51 @@ $accent: #ee3153;
   color: goldenrod !important;
 }
 
+@keyframes flashing {
+  20% {
+    opacity: 1;
+    transform: translateX(-2px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-2px);
+  }
+  
+  80% {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes flashing-two {
+  20% {
+    opacity: 1;
+    transform: translateX(1px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 
 @keyframes slide-down {
   100% {
@@ -161,9 +266,9 @@ $accent: #ee3153;
   }
 }
 @keyframes dissappear-mobile-menu-links {
-  100%{
+  100% {
     opacity: 0;
-    transform: translateY(-10px)
+    transform: translateY(-10px);
   }
 }
 @keyframes appear-mobile-menu-links {
@@ -172,12 +277,12 @@ $accent: #ee3153;
     opacity: 1;
   }
 }
-@media (max-width:800px) {
+@media (max-width: 800px) {
   #header {
     display: none;
   }
 }
-@media (min-width:801px) {
+@media (min-width: 801px) {
   #header-mobile {
     display: none;
   }

@@ -6,23 +6,19 @@ const Projects = () => {
   let rendered = false;
   const projects = createRef();
   const missionBoard = createRef();
-  const missionBoardHeaght = window.innerHeight * .65;
+  const missionBoardHeaght = window.innerHeight * 0.65;
   useEffect(() => {
     if (!rendered) {
       //window.scrollTo(0,0);
-
-      if (projects.current !== null) {
-        rendered = true;
-        setTimeout(() => {
+      setTimeout(() => {
+        if (projects.current !== null) {
           projects.current.style.overflow = "unset";
-          missionBoard.current.style.height = missionBoardHeaght + 'px !important';
-          console.log('too')
-        }, 1100);
-      }
+          rendered = true;
+          //missionBoard.current.style.height = missionBoardHeaght + 'px !important';
+        }
+      }, 1100);
     }
-   
   });
-
 
   return (
     <div ref={projects} id="projects-section">
@@ -36,7 +32,7 @@ const Projects = () => {
       </section>
       <div id="projects-intro-ani"></div>
       <section id="projects-projects">
-        {/* <ProjectVfa /> */}
+        <ProjectVfa />
       </section>
     </div>
   );

@@ -5,7 +5,7 @@ const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const CompressionWebpackPlugin = require("compression-webpack-plugin")
 const config = {
   entry: "./src/index.js",
   output: {
@@ -62,9 +62,11 @@ const config = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
+
   plugins: [
-    new CopyPlugin({ patterns: [{ from: "./src/assets", to: "./assets" }] }),
+    new CopyPlugin({ patterns: [{ from: "./assets", to: "./assets" }] }),
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
+    new CompressionWebpackPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: "static",
       openAnalyzer: false,
@@ -76,7 +78,7 @@ const config = {
     disableHostCheck: true,
     open: true,
     historyApiFallback: true,
-    contentBase: "./src",
+    contentBase: "./",
     compress: true,
     watchOptions: {
       aggregateTimeout: 300,

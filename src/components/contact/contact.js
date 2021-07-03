@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createRef } from "react";
+import React, { useEffect, useState } from "react";
 import emailjs, { init } from "emailjs-com";
 init("user_7TRpE1ETxxdlRHzpPATZ1");
 import { CSSTransition } from "react-transition-group";
@@ -9,7 +9,14 @@ const Contact = ({ reference, scrolled }) => {
   let [email, setEmail] = useState("");
   let [subject, setSubject] = useState("");
   let [message, setMessage] = useState("");
+
+  let [nameError, setNameError] = useState("");
+  let [emailError, setEmailError] = useState("");
+  let [subjectError, setSubjectError] = useState("");
+  let [messageError, setMessageError] = useState("");
+
   let [formCounter, setFormCounter] = useState(1);
+
 
   function sendEmail() {
     const templateParams = {
@@ -22,7 +29,18 @@ const Contact = ({ reference, scrolled }) => {
     emailjs
       .send("service_4y3oj9v", "template_0u1j27d", templateParams)
       .then(function () {
-        alert("Your mail is sent!");
+        let animation = document.getElementById("contact-form-sent-ani");
+        animation.classList.add("sent-ani");
+
+        setTimeout(() => {
+          setFormCounter(1);
+          setMessageError("");
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+          animation.classList.remove("sent-ani");
+        }, 2000);
       })
       .catch(function (error) {
         alert("Oops... " + JSON.stringify(error));
@@ -30,10 +48,44 @@ const Contact = ({ reference, scrolled }) => {
   }
 
   function changeFormCounter(num) {
+    console.log(num);
     if (num < 5 && num > 0) {
-      setFormCounter(num);
+      if (num === 2) {
+        if (name.length > 1) {
+          setFormCounter(num);
+          setNameError("");
+        } else {
+          setNameError("Please provide your name");
+          setName("");
+        }
+      }
+
+      if (num === 3) {
+        if (email.match(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/)) {
+          setFormCounter(num);
+          setEmailError("");
+        } else {
+          setEmailError("Please provide your email");
+          setEmail("");
+        }
+      }
+      if (num === 4) {
+        if (subject.length > 5) {
+          setFormCounter(num);
+          setSubjectError("");
+        } else {
+          setSubjectError("Please provide your subject");
+          setSubject("");
+        }
+      }
     } else if (num > 4) {
-      sendEmail();
+      if (message.length > 5) {
+        sendEmail();
+      } else {
+        setMessageError("Please provide your message");
+        setMessage("");
+        //txtbox.SelectionLength = 0; to bring ticker back to show error
+      }
     }
   }
 
@@ -59,6 +111,7 @@ const Contact = ({ reference, scrolled }) => {
                 key={formCounter + 1}
                 className="contact-form contact-form-name"
                 type="text"
+                placeholder={nameError}
               />
             </>
           </CSSTransition>
@@ -80,6 +133,7 @@ const Contact = ({ reference, scrolled }) => {
                 key={formCounter + 1}
                 className="contact-form contact-form-email"
                 type="text"
+                placeholder={emailError}
               />
             </>
           </CSSTransition>
@@ -99,6 +153,7 @@ const Contact = ({ reference, scrolled }) => {
             key={formCounter + 1}
             className="contact-form contact-form-subject"
             type="text"
+            placeholder={subjectError}
           />
         </>
       );
@@ -110,12 +165,12 @@ const Contact = ({ reference, scrolled }) => {
           </div>
           <textarea
             autoFocus
-            onKeyPress={nextInputOnEnter}
             onChange={(e) => setMessage(e.target.value)}
             value={message}
             key={formCounter + 1}
             className="contact-form contact-form-message"
             type="text"
+            placeholder={messageError}
           />
         </>
       );
@@ -145,10 +200,16 @@ const Contact = ({ reference, scrolled }) => {
         </div>
         <div id="contact-form-container">
           {showActiveInput()}
-          <img onClick={() => changeFormCounter(formCounter + 1)} id="contact-form-arrow" src="/assets/arrow-right.svg" />
+          {formCounter === 4 ? (
+            <img onClick={() => changeFormCounter(formCounter + 1)} id="contact-form-arrow" src="/assets/arrow-right-red.svg" />
+          ) : (
+            <img onClick={() => changeFormCounter(formCounter + 1)} id="contact-form-arrow" src="/assets/arrow-right.svg" />
+          )}
+
           <div id="contact-form-counter">{formCounter + "/4"}</div>
         </div>
       </section>
+      <div id="contact-form-sent-ani">SENT</div>
     </div>
   );
 };

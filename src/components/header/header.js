@@ -4,7 +4,6 @@ import BurgerMenuIcon from "./burderMenuIcon/burgerMenuIcon";
 import "./header.scss";
 
 const Header = (props) => {
-  let onProjectsView = props.location.pathname === "/projects" ? true : false;
   let mobileMenuIsOpen = false;
   const mobileMenu = createRef();
 
@@ -43,6 +42,10 @@ const Header = (props) => {
       openMenu();
     }
   }
+  function pushToLanding() {
+    closeMenu();
+    props.history.push("/");
+  }
   function pushToAbout() {
     closeMenu();
     props.history.push("/about");
@@ -59,20 +62,28 @@ const Header = (props) => {
     <>
       <header id="header">
         <section id="header-left">
-          <Link id="ko" to="/about">
-       
-            <div className="header-link">
-              ABOUT
-
-              </div>
+          <Link to="/about">
+            <div className="header-link-container">
+            <div className="header-link-ani">ABOUT</div>
+            <div className="header-link-ani-2">ABOUT</div>
+              <div  style={{color: props.location.pathname==='/about' ? "#8a2be2":'#ee3153'}} className="header-link">ABOUT</div>
+            </div>
           </Link>
 
-          <Link to="/projects">
-            <div className="header-link">PROJECTS </div>
+          <Link to="/portfolio">
+            <div className="header-link-container">
+            <div className="header-link-ani">PORTFOLIO</div>
+            <div className="header-link-ani-2">PORTFOLIO</div>
+              <div  style={{color: props.location.pathname==='/portfolio' ? "#8a2be2":'#ee3153'}} className="header-link">PORTFOLIO </div>
+            </div>
           </Link>
 
           <Link to="/contact">
-            <div className="header-link">CONTACT </div>
+            <div className="header-link-container">
+            <div className="header-link-ani">CONTACT</div>
+            <div className="header-link-ani-2">CONTACT</div>
+              <div style={{color: props.location.pathname==='/contact' ? "#8a2be2":'#ee3153'}} className="header-link">CONTACT </div>
+            </div>
           </Link>
         </section>
         <section id="header-right">
@@ -105,7 +116,6 @@ const Header = (props) => {
         </section>
       </header>
       <header id="header-mobile">
-        {/* <img onClick={openMobileMenu} src="/assets/burger-menu-icon.svg" id="burger-menu-icon" /> */}
         <BurgerMenuIcon openMenu={openMobileMenu} />
         <div ref={mobileMenu} id="header-mobile-menu">
           <div id="header-mobile-links">
@@ -118,6 +128,8 @@ const Header = (props) => {
             <div className="header-mobile-link" onClick={pushToContacts}>
               CONTACT
             </div>
+            <img src="/assets/eye-icon.svg" id="header-eye-icon" />
+            <img onClick={pushToLanding} src="/assets/eyeball-icon.svg" id="header-eyeball-icon" />
           </div>
 
           <div id="header-mobile-social-links">

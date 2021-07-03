@@ -38,7 +38,15 @@ a:visited {
 ::-webkit-scrollbar-thumb:hover {
   background: #8A2BE2;
 }
+body {
+  scrollbar-width: 10px;
+  /* Track */
+  scrollbar-track-color:#333399;
+  scrollbar-color: #EE3153;
+  scrollbar-highlight-color: #8A2BE2;
+  
 
+}
 
 .drop-exit {
   z-index: -1;

@@ -7,8 +7,8 @@ const ProjectVfa = () => {
     <div id="project-vfa-comp">
   
       <div id="project-vfa-container">
-      <a  id="link-to-vfa" href="https://visionfirstadvocacy.com" target="_blank">
-      </a>
+         <a  id="link-to-vfa" href="https://visionfirstadvocacy.com" target="_blank">
+         </a>
       </div>
     
     </div>
