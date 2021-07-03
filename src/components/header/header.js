@@ -50,9 +50,9 @@ const Header = (props) => {
     closeMenu();
     props.history.push("/about");
   }
-  function pushToProjects() {
+  function pushToPortfolio() {
     closeMenu();
-    props.history.push("/projects");
+    props.history.push("/portfolio");
   }
   function pushToContacts() {
     closeMenu();
@@ -64,25 +64,31 @@ const Header = (props) => {
         <section id="header-left">
           <Link to="/about">
             <div className="header-link-container">
-            <div className="header-link-ani">ABOUT</div>
-            <div className="header-link-ani-2">ABOUT</div>
-              <div  style={{color: props.location.pathname==='/about' ? "#8a2be2":'#ee3153'}} className="header-link">ABOUT</div>
+              <div className="header-link-ani">ABOUT</div>
+              <div className="header-link-ani-2">ABOUT</div>
+              <div style={{ color: props.location.pathname === "/about" ? "#8a2be2" : "#ee3153" }} className="header-link">
+                ABOUT
+              </div>
             </div>
           </Link>
 
           <Link to="/portfolio">
             <div className="header-link-container">
-            <div className="header-link-ani">PORTFOLIO</div>
-            <div className="header-link-ani-2">PORTFOLIO</div>
-              <div  style={{color: props.location.pathname==='/portfolio' ? "#8a2be2":'#ee3153'}} className="header-link">PORTFOLIO </div>
+              <div className="header-link-ani">PORTFOLIO</div>
+              <div className="header-link-ani-2">PORTFOLIO</div>
+              <div style={{ color: props.location.pathname === "/portfolio" ? "#8a2be2" : "#ee3153" }} className="header-link">
+                PORTFOLIO{" "}
+              </div>
             </div>
           </Link>
 
           <Link to="/contact">
             <div className="header-link-container">
-            <div className="header-link-ani">CONTACT</div>
-            <div className="header-link-ani-2">CONTACT</div>
-              <div style={{color: props.location.pathname==='/contact' ? "#8a2be2":'#ee3153'}} className="header-link">CONTACT </div>
+              <div className="header-link-ani">CONTACT</div>
+              <div className="header-link-ani-2">CONTACT</div>
+              <div style={{ color: props.location.pathname === "/contact" ? "#8a2be2" : "#ee3153" }} className="header-link">
+                CONTACT{" "}
+              </div>
             </div>
           </Link>
         </section>
@@ -122,7 +128,7 @@ const Header = (props) => {
             <div className="header-mobile-link" onClick={pushToAbout}>
               ABOUT
             </div>
-            <div className="header-mobile-link" onClick={pushToProjects}>
+            <div className="header-mobile-link" onClick={pushToPortfolio}>
               PORTFOLIO
             </div>
             <div className="header-mobile-link" onClick={pushToContacts}>
@@ -133,9 +139,15 @@ const Header = (props) => {
           </div>
 
           <div id="header-mobile-social-links">
-            <img className="header-mobile-social-icon" src="/assets/linkedin-icon.svg" />
-            <img className="header-mobile-social-icon" src="/assets/github-logo.svg" />
-            <img className="header-mobile-social-icon" src="/assets/instagram-icon.svg" />
+            <a target="_blank" href="https://www.linkedin.com/in/pavel-yeganov-309269114/">
+              <img className="header-mobile-social-icon" src="/assets/linkedin-icon.svg" />
+            </a>
+            <a target="_blank" href="https://github.com/pagnito">
+              <img className="header-mobile-social-icon" src="/assets/github-logo.svg" />
+            </a>
+            <a target="_blank" href="https://www.instagram.com/wayofthecode/">
+              <img className="header-mobile-social-icon" src="/assets/instagram-icon.svg" />
+            </a>
           </div>
         </div>
       </header>

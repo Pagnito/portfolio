@@ -1,5 +1,5 @@
 {
-  "homepage": "http://pagnito.github.io/portfolio",
+  "homepage": "http://pagnito.github.io/Pagnito.github.io",
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
@@ -8,6 +8,7 @@
     "clean": "rm dist/bundle.js",
     "dev": "webpack serve --mode development",
     "build": "webpack --mode production",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "author": "pavel yeganov",
