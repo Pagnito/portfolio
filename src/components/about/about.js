@@ -48,7 +48,7 @@ const About = () => {
             <div className="about-text about-text-four">
               On my free time I like to ride my motorcycle, or electric longboard, hang out with friends and make love to music...ugh ugh I meant make music.
             </div>
-            <a href="/assets/portrait.jpg" download="portrait.jpg">
+            <a href="/assets/resume-2021-pavel-yeganov.pdf" download="resume-2021-pavel-yeganov.pdf">
               <button id="resume-button">Download Resume</button>
             </a>
           </div>
