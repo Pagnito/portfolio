@@ -104,6 +104,7 @@
   }
 }
 
+
 @keyframes appear-landing-text {
   100% {
     transform: translateY(0px);
@@ -255,10 +256,29 @@
   .intro-text {
     font-size: 45px !important;
   }
+  .apps-word {
+    font-size: 50px !important;
+  }
+  .sites-word {
+    font-size: 50px !important;
+  }
+  .good-word {
+    font-size: 60px !important;
+  }
 }
 
 @media (max-width: 600px) {
   .intro-text {
     font-size: 35px !important;
+  }
+  .good-word {
+    font-size: 70px !important;
+    line-height: .85 !important;
+  }
+  .apps-word {
+    font-size: 55px !important;
+  }
+  .sites-word {
+    font-size: 45px !important;
   }
 }
