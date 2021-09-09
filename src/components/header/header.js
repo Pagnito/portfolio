@@ -64,30 +64,27 @@ const Header = (props) => {
         <section id="header-left">
           <Link to="/about">
             <div className="header-link-container">
-              <div className="header-link-ani">ABOUT</div>
-              <div className="header-link-ani-2">ABOUT</div>
-              <div style={{ color: props.location.pathname === "/about" ? "#8a2be2" : "#ee3153" }} className="header-link">
+              <div style={{ width: props.location.pathname === "/about" ? "100%" : "0%" }} className="header-link-ani"></div>
+              <div className="header-link">
                 ABOUT
               </div>
             </div>
           </Link>
 
-          <Link to="/portfolio">
+          {/* <Link to="/portfolio">
             <div className="header-link-container">
-              <div className="header-link-ani">PORTFOLIO</div>
-              <div className="header-link-ani-2">PORTFOLIO</div>
-              <div style={{ color: props.location.pathname === "/portfolio" ? "#8a2be2" : "#ee3153" }} className="header-link">
-                PORTFOLIO{" "}
+              <div style={{ width: props.location.pathname === "/portfolio" ? "100%" : "0%" }} className="header-link-ani"></div>
+              <div className="header-link">
+                PORTFOLIO
               </div>
             </div>
-          </Link>
+          </Link> */}
 
           <Link to="/contact">
             <div className="header-link-container">
-              <div className="header-link-ani">CONTACT</div>
-              <div className="header-link-ani-2">CONTACT</div>
-              <div style={{ color: props.location.pathname === "/contact" ? "#8a2be2" : "#ee3153" }} className="header-link">
-                CONTACT{" "}
+              <div style={{ width: props.location.pathname === "/contact" ? "100%" : "0%" }} className="header-link-ani"></div>
+              <div className="header-link">
+                CONTACT
               </div>
             </div>
           </Link>
