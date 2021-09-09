@@ -2,37 +2,35 @@
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
-  padding: 60px;
+  //padding: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   overflow: hidden;
-
   .intro-text {
     font-family: "Rubik Mono One", sans-serif;
-    font-size: 6vw;
+    font-size: 50px;
     opacity: 0;
     line-height: 1;
-    animation: appear-landing-text 1s ease-in-out 4s forwards;
     transform: translateY(-20px);
+    #idea-bulb {
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      background-color: #ee3153;
+      right: 19px;
+      margin-top: -140px;
+    }
   }
 
-  .pavel-word {
+  .company-name {
     display: inline-block;
-    animation: appear-landing-text 1s ease-in-out 3s forwards !important;
-  }
-  .good-word {
-    animation: appear-landing-text 1s ease-in-out 3.2s forwards;
-  }
-  .sites-word {
-    animation: appear-landing-text 1s ease-in-out 3.4s forwards;
-  }
-  .apps-word {
-    animation: appear-landing-text 1s ease-in-out 3.5s forwards;
+    
   }
 
   #bounce-ball {
@@ -104,11 +102,87 @@
   }
 }
 
+#landing-section-two {
+  height: 100vh;
+  width: 100%;
+ // background-color: #333399;
+ // margin-top: 100vh;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #landing-section-two-content-container {
+    display: flex;
+    #landing-section-two-list-1 {
+      font-size: 50px;
+      font-family:  "Chathura";
+      font-weight: bold;
+      line-height: 60px;
+      color: black;
+      margin-top: 200px;
+     margin-left: 50px;
+     padding-right: 20px;
+     list-style-type: none;
+    }
+    #landing-section-two-list-2 {
+      font-size: 50px;
+      line-height: 60px;
+      font-family:  "Chathura";
+      font-weight: bold;
+      color: black;
+      margin-top: 200px;
+     margin-left: 50px;
+     padding-right: 20px;
+     list-style-type: none;
+    }
+  
+    #landing-section-two-text-1 {
+      position: absolute;
+      //margin-left: -50px;
+      font-family: "Abril Fatface";
+      font-size: 120px;
+      color: #EE3153;
+    }
+    #landing-section-two-text-2 {
+      position: absolute;
+      //margin-left: -50px;
+      font-family: "Abril Fatface";
+      font-size: 120px;
+      color: #EE3153;
+      //text-shadow: 2px 2px 10px rgba(0,0,0,.8);
+      //font-weight: bold;
+    }
+    
+    #landing-section-two-image {
+      height: 550px;
+      width: 850px;
+      //margin-left: 150px;
+      border-radius: 10px;
+
+    }
+  }
+
+}
+
+.hide-landing-text {
+  animation: disappear-landing-text .4s ease-in-out forwards;
+}
+
+.show-landing-text {
+  animation: appear-landing-text 1s ease-in-out 4s forwards;
+}
 
 @keyframes appear-landing-text {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@keyframes disappear-landing-text {
+  100% {
+  
+    opacity: 0;
   }
 }
 
@@ -230,10 +304,9 @@
   100% {
     transform: translateY(-223px);
   }
-  // 100% {
-  //   transform: translateY(0px) scale(100);
-  // }
 }
+
+
 @keyframes explode {
   100% {
     transform: translateY(0px) scale(100);
@@ -250,35 +323,3 @@
   }
 }
 
-
-
-@media (max-width: 750px) {
-  .intro-text {
-    font-size: 45px !important;
-  }
-  .apps-word {
-    font-size: 50px !important;
-  }
-  .sites-word {
-    font-size: 50px !important;
-  }
-  .good-word {
-    font-size: 60px !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .intro-text {
-    font-size: 35px !important;
-  }
-  .good-word {
-    font-size: 70px !important;
-    line-height: .85 !important;
-  }
-  .apps-word {
-    font-size: 55px !important;
-  }
-  .sites-word {
-    font-size: 45px !important;
-  }
-}

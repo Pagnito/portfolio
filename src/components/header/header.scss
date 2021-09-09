@@ -24,8 +24,10 @@ $accent: #ee3153;
       .header-link-ani {
         overflow:hidden;
         position: absolute;
-        height: 0%;
-        width: 100%;
+        height: 4px;
+        background-color: #ee3153;
+        margin-top: 25px;
+        width: 0%;
         font-size: 13px;
         color: white;
         font-family: Cerebri, Helvetica, Arial, sans-serif;
@@ -35,24 +37,9 @@ $accent: #ee3153;
         font-weight: bold;
         letter-spacing: 3px;
         //opacity: 0;
-        transition: height .5s ease-out;
+        transition: width .5s ease-out;
       }
-      .header-link-ani-2 {
-        overflow: hidden;
-        position: absolute;
-        height: 0%;
-        width: 100%;
-        font-size: 13px;
-        color: #8a2be2;
-        font-weight: bold;
-        font-family: Cerebri, Helvetica, Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        letter-spacing: 3px;
-        //opacity: 0;
-        transition: height .5s ease-out .4s;
-      }
+    
   
       .header-link {
         font-family: Cerebri, Helvetica, Arial, sans-serif;
@@ -62,6 +49,7 @@ $accent: #ee3153;
         //color: #ee3153 !important;
         cursor: pointer;
         letter-spacing: 3px;
+        color: #ee3153;
       }
       // .header-link-ani-2:hover {
       //   animation: flashing 1s ease-out infinite;;
@@ -71,11 +59,11 @@ $accent: #ee3153;
     }
     .header-link-container:hover .header-link-ani {
       //animation: flashing .6s ease-out infinite;;
-      height: 100%;
+      width: 100% !important;
     }
     .header-link-container:hover .header-link-ani-2 {
       //animation: flashing-two .6s ease-out infinite;;
-      height: 100%;
+      width: 100% !important;
     }
    
   }
@@ -202,17 +190,7 @@ $accent: #ee3153;
     }
   }
 }
-.open-mobile-menu {
-  width: 100% !important;
-  z-index: 100;
-}
-.close-mobile-menu {
-  width: 0% !important;
-  z-index: 100;
-}
-.header-link:hover {
-  color: goldenrod !important;
-}
+
 
 @keyframes flashing {
   20% {
