@@ -65,6 +65,15 @@
   align-items: center;
 
 }
+::-moz-selection { /* Code for Firefox */
+  color: rgba(0, 0, 0, 0);
+  background: #ee3153;
+}
+
+::selection {
+  color: rgba(0, 0, 0, 0);
+  background: #ee3153;
+}
 #about-text-container-spaceholder {
   width: 50%;
   height: 100vh;

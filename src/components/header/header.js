@@ -72,7 +72,7 @@ const Header = (props) => {
             </div>
           </Link>
 
-          <Link to="/portfolio">
+          {/* <Link to="/portfolio">
             <div className="header-link-container">
               <div className="header-link-ani">PORTFOLIO</div>
               <div className="header-link-ani-2">PORTFOLIO</div>
@@ -80,7 +80,7 @@ const Header = (props) => {
                 PORTFOLIO{" "}
               </div>
             </div>
-          </Link>
+          </Link> */}
 
           <Link to="/contact">
             <div className="header-link-container">
