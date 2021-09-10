@@ -47,7 +47,15 @@ body {
   
 
 }
+::-moz-selection { /* Code for Firefox */
+  color: #ee3153 ;
+  background:rgba(0, 0, 0, 0); ;
+}
 
+::selection {
+  color: #ee3153;
+  background: rgba(0, 0, 0, 0);
+}
 .drop-exit {
   z-index: -1;
   top: 0;
