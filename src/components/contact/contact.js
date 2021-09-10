@@ -212,7 +212,7 @@ const Contact = ({ reference, scrolled }) => {
         <div id="contact-form-container">
           {showActiveInput()}
           {formCounter === 4 ? (
-            <img onClick={() => changeFormCounter(formCounter + 1)} id="contact-form-arrow" src="/assets/arrow-right-red.svg" />
+            <img onClick={() => changeFormCounter(formCounter + 1)} id="contact-form-arrow" src="/assets/arrow-right-blue.svg" />
           ) : (
             <img onClick={() => changeFormCounter(formCounter + 1)} id="contact-form-arrow" src="/assets/arrow-right.svg" />
           )}

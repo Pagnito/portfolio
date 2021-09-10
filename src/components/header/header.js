@@ -9,6 +9,12 @@ const Header = (props) => {
 
   function closeMenu() {
     mobileMenuIsOpen = false;
+    let topBurgerMenuBar = document.getElementById('bar-1');
+    let bottomBurgerMenuBar = document.getElementById('bar-2');
+    if(topBurgerMenuBar && bottomBurgerMenuBar){
+      topBurgerMenuBar.classList.remove('cross-top-bar');
+      bottomBurgerMenuBar.classList.remove('cross-bottom-bar');
+    }
     document.body.style.overflow = "unset";
     mobileMenu.current.classList.add("close-mobile-menu");
     mobileMenu.current.classList.remove("open-mobile-menu");
@@ -24,6 +30,12 @@ const Header = (props) => {
   }
   function openMenu() {
     mobileMenuIsOpen = true;
+    let topBurgerMenuBar = document.getElementById('bar-1');
+    let bottomBurgerMenuBar = document.getElementById('bar-2');
+    if(topBurgerMenuBar && bottomBurgerMenuBar){
+      topBurgerMenuBar.classList.add('cross-top-bar');
+      bottomBurgerMenuBar.classList.add('cross-bottom-bar');
+    }
     document.body.style.overflow = "hidden";
     mobileMenu.current.classList.remove("close-mobile-menu");
     mobileMenu.current.classList.add("open-mobile-menu");
