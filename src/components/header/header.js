@@ -125,9 +125,9 @@ const Header = (props) => {
             <div className="header-mobile-link" onClick={pushToAbout}>
               ABOUT
             </div>
-            <div className="header-mobile-link" onClick={pushToPortfolio}>
+            {/* <div className="header-mobile-link" onClick={pushToPortfolio}>
               PORTFOLIO
-            </div>
+            </div> */}
             <div className="header-mobile-link" onClick={pushToContacts}>
               CONTACT
             </div>

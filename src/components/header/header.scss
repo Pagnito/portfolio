@@ -12,6 +12,7 @@ $accent: #ee3153;
   #header-left {
     width: 50%;
     display: flex;
+    padding-left: 100px;
     .header-link-container {
       margin-left: 25px;
       margin-top: 25px;
@@ -73,7 +74,7 @@ $accent: #ee3153;
     justify-content: flex-end;
     #header-icon-container {
       margin-top: 30px;
-      margin-right: 25px;
+      margin-right: 145px;
       width: 180px;
       height: 30px;
       display: flex;
@@ -127,7 +128,7 @@ $accent: #ee3153;
     height: 102vh;
     right: 0;
     position: fixed;
-    background-color: #333399;
+    background-color: #191919;
     transition: width 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -136,10 +137,10 @@ $accent: #ee3153;
     overflow: hidden;
 
     #header-mobile-links {
-      font-family: Cerebri, Helvetica, Arial, sans-serif;
+      font-family: "Rajdhani";
       font-weight: bold;
       color: white;
-      font-size: 35px;
+      font-size: 25px;
       height: 20vh;
       display: flex;
       justify-content: center;
@@ -152,7 +153,7 @@ $accent: #ee3153;
       display: none;
       transition: opacity 0.4s ease-in-out;
       .header-mobile-link {
-        margin-top: 20px;
+        margin-top: 30px;
       }
       #header-eye-icon {
         position: absolute;
@@ -191,6 +192,14 @@ $accent: #ee3153;
   }
 }
 
+.open-mobile-menu {
+  width: 100% !important;
+  z-index: 100;
+}
+.close-mobile-menu {
+  width: 0% !important;
+  z-index: 100;
+}
 
 @keyframes flashing {
   20% {

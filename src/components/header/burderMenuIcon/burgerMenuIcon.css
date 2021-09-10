@@ -11,19 +11,34 @@
 }
 .burger-menu-icon-bar {
   background-color: #EE3153;
-  margin:2px;
+  margin:4px;
   height: 5px;
 }
 .bar-1 {
-  width: 100%;
+  width: 0%;
+  border-radius: 2px;
+  transition: all .3s ease-in-out;
+  animation: slide-burger-menu .5s ease-in-out 3.5s forwards;
+
 }
 .bar-2 {
-  width: 80%;
-}
-.bar-3 {
-  width: 60%
-}
-.bar-4 {
-  width: 80%;
+  width: 0%;
+  border-radius: 2px;
+  transition: all .3s ease-in-out;
+  animation: slide-burger-menu .5s ease-in-out 3.7s forwards;
 }
 
+@keyframes slide-burger-menu {
+  100% {
+    width: 100%;
+  }
+}
+
+.cross-top-bar {
+  transform: rotateZ(-40deg) translateY(-5px);
+  transform-origin: right top;
+}
+.cross-bottom-bar {
+  transform: rotateZ(40deg) translateY(5px);
+  transform-origin: right bottom;
+}

@@ -4,17 +4,18 @@
   box-sizing: border-box;
   //padding: 60px;
   display: flex;
-  flex-direction: column;
+  //flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   top: 0;
   left: 0;
   overflow: hidden;
+ 
   .intro-text {
-    font-family: "Rubik Mono One", sans-serif;
-    font-size: 50px;
+    font-family: "Rajdhani";
     opacity: 0;
+    font-weight: 600;
     line-height: 1;
     transform: translateY(-20px);
     #idea-bulb {
@@ -28,20 +29,33 @@
     }
   }
 
-  .company-name {
+  #my-name {
     display: inline-block;
-    
+    font-size: 60px;
   }
-
+  #my-title {
+    font-size: 20px;
+    margin-left: 2px;
+    margin-bottom: 3px;
+  }
+#bounce-ball-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   #bounce-ball {
     height: 40px;
     width: 40px;
     border-radius: 100%;
-    background-color: #333399;
+    background-color: #3AA9B1;
     position: absolute;
     transform: translateY(-1000px);
     animation: bounce 1.2s ease-in-out forwards, explode 1s ease-in-out 1.2s forwards;
   }
+}
+
 
   .swing-door-container {
     height: 100vh;
@@ -74,13 +88,13 @@
     position: absolute;
   }
   .three {
-    background-color: #333399;
+    background-color: #3AA9B1;
   }
   .two {
-    background-color: #8a2be2;
+    background-color: #34b8c2;
   }
   .one {
-    background-color: #ee3153;
+    background-color: #3bd0db;
   }
   .swing-door-container div:nth-child(1) {
     animation-delay: 1s;
@@ -105,8 +119,8 @@
 #landing-section-two {
   height: 100vh;
   width: 100%;
- // background-color: #333399;
- // margin-top: 100vh;
+  // background-color: #3AA9B1;
+  // margin-top: 100vh;
   z-index: 100;
   display: flex;
   justify-content: center;
@@ -115,61 +129,65 @@
     display: flex;
     #landing-section-two-list-1 {
       font-size: 50px;
-      font-family:  "Chathura";
+      font-family: "Chathura";
       font-weight: bold;
       line-height: 60px;
       color: black;
       margin-top: 200px;
-     margin-left: 50px;
-     padding-right: 20px;
-     list-style-type: none;
+      margin-left: 50px;
+      padding-right: 20px;
+      list-style-type: none;
     }
     #landing-section-two-list-2 {
       font-size: 50px;
       line-height: 60px;
-      font-family:  "Chathura";
+      font-family: "Chathura";
       font-weight: bold;
       color: black;
       margin-top: 200px;
-     margin-left: 50px;
-     padding-right: 20px;
-     list-style-type: none;
+      margin-left: 50px;
+      padding-right: 20px;
+      list-style-type: none;
     }
-  
+
     #landing-section-two-text-1 {
       position: absolute;
       //margin-left: -50px;
       font-family: "Abril Fatface";
       font-size: 120px;
-      color: #EE3153;
+      color: #ee3153;
     }
     #landing-section-two-text-2 {
       position: absolute;
       //margin-left: -50px;
       font-family: "Abril Fatface";
       font-size: 120px;
-      color: #EE3153;
+      color: #ee3153;
       //text-shadow: 2px 2px 10px rgba(0,0,0,.8);
       //font-weight: bold;
     }
-    
+
     #landing-section-two-image {
       height: 550px;
       width: 850px;
       //margin-left: 150px;
       border-radius: 10px;
-
     }
   }
-
 }
 
 .hide-landing-text {
-  animation: disappear-landing-text .4s ease-in-out forwards;
+  animation: disappear-landing-text 0.4s ease-in-out forwards;
 }
 
 .show-landing-text {
   animation: appear-landing-text 1s ease-in-out 4s forwards;
+}
+
+@keyframes slide-in-graffiti {
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 @keyframes appear-landing-text {
@@ -181,7 +199,6 @@
 
 @keyframes disappear-landing-text {
   100% {
-  
     opacity: 0;
   }
 }
@@ -305,7 +322,6 @@
     transform: translateY(-223px);
   }
 }
-
 
 @keyframes explode {
   100% {

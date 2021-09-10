@@ -1,5 +1,6 @@
 import React, { useEffect, createRef, useState } from "react";
 import "./landing.scss";
+import "./landing.css"
 
 const Landing = () => {
   const swingDoors = createRef();
@@ -14,26 +15,32 @@ const Landing = () => {
   }, 1800);
 
 
-  useEffect(()=>{
-    window.scrollTo(0,0);
-    document.body.style.backgroundColor = 'white'
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.style.backgroundColor = 'white';
+    setTimeout(() => {
+      if (swingDoors.current) {
+        swingDoors.current.style.display = 'none'
+      }
+
+    }, 4000)
   }, []);
 
   document.addEventListener('scroll', () => {
     //document.body.style.backgroundColor = '#333399'
-    
+
   })
   return (
     <>
       <div id="landing-section">
-        <div className="intro-text show-landing-text"><span style={{ marginRight: '15px' }}>Iam</span>
-          <span className="company-name" style={{ color: "#ee3153", marginLeft: '15px' }}> PavelYeganov</span>
-          {/* <div id="idea-bulb"></div> */}
+        {/* / UX/UI Designer */}
+
+
+
+        <div id="bounce-ball-container">
+          <div ref={ball} id="bounce-ball"></div>
         </div>
-        
 
-
-        <div ref={ball} id="bounce-ball"></div>
 
         <section ref={swingDoors} className="swing-door-container">
           <div className="swing-door-left one"></div>
@@ -43,7 +50,16 @@ const Landing = () => {
           <div className="swing-door-left three"></div>
           <div className="swing-door-right three"></div>
         </section>
+        <div id="landing-pic-container">
+          <img id="landing-pic" src="/assets/graffiti.jpg" />
+          <div id="landing-pic-overlay"></div>
+        </div>
+        <div className="intro-text show-landing-text">
+          <div id="my-title" >Full Stack Developer - Providence RI </div>
+          <div id="my-name"> I am<span style={{ color: "#ee3153" }}> Pavel Yeganov</span></div>
+        </div>
       </div>
+
       {/* <div id="landing-video-container">
         <video id="landing-video" autoPlay muted loop>
           <source src="/assets/lightBulbVideo.mp4" type="video/mp4" autoPlay />
