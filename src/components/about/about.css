@@ -33,7 +33,7 @@
 }
 .about-slide-stage-two-image {
   background-image: url("/assets/portrait.jpg");
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 0%;
