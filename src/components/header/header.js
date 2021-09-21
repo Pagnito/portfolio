@@ -120,7 +120,7 @@ const Header = (props) => {
               </a>
             </div>
             <div className="link-animation-container">
-              <a href="https://www.instagram.com/wayofthecode/" className="header-social-icon-link social-icon-face" target="_blank" id="instagram-icon-link">
+              <a href="https://www.instagram.com/undefynedsource" className="header-social-icon-link social-icon-face" target="_blank" id="instagram-icon-link">
                 <img className="header-social-icon instagram-icon" src="/assets/instagram-icon.svg" />
               </a>
               <a href="https://www.instagram.com/wayofthecode/" className="header-social-icon-link social-icon-bottom" target="_blank" id="instagram-icon-gradient-link">
@@ -154,7 +154,7 @@ const Header = (props) => {
             <a target="_blank" href="https://github.com/pagnito">
               <img className="header-mobile-social-icon" src="/assets/github-logo.svg" />
             </a>
-            <a target="_blank" href="https://www.instagram.com/wayofthecode/">
+            <a target="_blank" href="https://www.instagram.com/undefynedsource/">
               <img className="header-mobile-social-icon" src="/assets/instagram-icon.svg" />
             </a>
           </div>
