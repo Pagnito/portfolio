@@ -47,7 +47,6 @@ const Contact = ({ reference, scrolled }) => {
   }
 
   function changeFormCounter(num) {
-    console.log(num);
     if (num < 5 && num > 0) {
       if (num === 2) {
         if (name.length > 1) {

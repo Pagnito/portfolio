@@ -52,51 +52,15 @@ const Landing = () => {
         </section>
         <div id="landing-pic-container">
           <img id="landing-pic" src="/assets/graffiti.jpg" />
-          <div id="landing-pic-overlay"></div>
+          <div id="landing-pic-overlay">
+            Working On Projects that reflect my current skill level!
+          </div>
         </div>
         <div className="intro-text show-landing-text">
           <div id="my-title" >Full Stack Developer - Providence RI </div>
           <div id="my-name"> I am<span style={{ color: "#ee3153" }}> Pavel Yeganov</span></div>
         </div>
       </div>
-
-      {/* <div id="landing-video-container">
-        <video id="landing-video" autoPlay muted loop>
-          <source src="/assets/lightBulbVideo.mp4" type="video/mp4" autoPlay />
-        </video>
-      </div> */}
-      {/* <div id="landing-section-two">
-        <div id="landing-section-two-content-container">
-          <div id="landing-section-two-text-1">
-            We Design
-          </div>
-          <ul id="landing-section-two-list-1">
-            <li>Get to know you</li>
-            <li>Get to know your business</li>
-            <li>Understand your goals</li>
-            <li>Get to work!</li>
-          </ul>
-          <div id="landing-section-two-image-container">
-            <img id="landing-section-two-image" src="/assets/design-pic-2.jpg" />
-          </div>
-        </div>
-      </div>
-      <div id="landing-section-two">
-        <div id="landing-section-two-content-container">
-          <div id="landing-section-two-text-2">
-            We Develop
-          </div>
-          <ul id="landing-section-two-list-2">
-            <li>Get to know you</li>
-            <li>Get to know your business</li>
-            <li>Understand your goals</li>
-            <li>Get to work!</li>
-          </ul>
-          <div id="landing-section-two-image-container">
-            <img id="landing-section-two-image" src="/assets/develop-pic-pink.jpg" />
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };

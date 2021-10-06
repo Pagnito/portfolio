@@ -73,6 +73,9 @@ const config = {
     }),
     new MiniCssExtractPlugin(),
   ],
+  optimization: {
+    minimize: true,
+  },
   devServer: {
     port: 3000,
     disableHostCheck: true,

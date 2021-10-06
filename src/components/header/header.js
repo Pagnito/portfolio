@@ -15,7 +15,7 @@ const Header = (props) => {
       topBurgerMenuBar.classList.remove('cross-top-bar');
       bottomBurgerMenuBar.classList.remove('cross-bottom-bar');
     }
-    document.body.style.overflow = "unset";
+    // document.body.style.overflow = "unset";
     mobileMenu.current.classList.add("close-mobile-menu");
     mobileMenu.current.classList.remove("open-mobile-menu");
     let links = Array.from(mobileMenu.current.children);
@@ -36,7 +36,7 @@ const Header = (props) => {
       topBurgerMenuBar.classList.add('cross-top-bar');
       bottomBurgerMenuBar.classList.add('cross-bottom-bar');
     }
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
     mobileMenu.current.classList.remove("close-mobile-menu");
     mobileMenu.current.classList.add("open-mobile-menu");
     let links = Array.from(mobileMenu.current.children);

@@ -4,30 +4,32 @@ import "./about.css";
 
 const About = () => {
   const about = React.createRef();
-  let rendered=false;
-  useEffect(() => {
-    if(!rendered){
-      //window.scrollTo(0, 0);
-      let width = window.innerWidth;
-      setTimeout(() => {
-        if(width < 601) {
-          if(about.current!==null){
-            about.current.style.overflowY = 'unset';
-            rendered=true;
-          }        
-        }
-      },1500)
-    }   
-  });
+  let rendered = false;
+  // useEffect(() => {
+  //   if (!rendered) {
+  //     //window.scrollTo(0, 0);
+  //     let width = window.innerWidth;
+  //     setTimeout(() => {
+  //       if (width < 601) {
+  //         if (about.current !== null) {
+  //           about.current.style.overflowY = 'unset';
+  //           rendered = true;
+  //         }
+  //       }
+  //     }, 1500)
+  //   }
+  // });
 
-  
+
   return (
-    <div  id="about-section">
+    <div id="about-section">
       <section ref={about} className="about-slide-container">
-        <div className="about-slide about-image-container">
+
+        <div className="about-slide about-image-container"></div>
+        <div className="about-slide about-text-container"></div>
+        <div id="about-section-content">
           <div className="about-slide-stage-two-image"></div>
-        </div>
-        <div className="about-slide about-text-container">
+
           <div className="about-slide-stage-two-text">
             <div id="name-title">
               P<span style={{ marginLeft: "-15px" }}>Y</span>
@@ -52,9 +54,8 @@ const About = () => {
               <button id="resume-button">Download Resume</button>
             </a>
           </div>
-         
-       
         </div>
+
       </section>
     </div>
   );
