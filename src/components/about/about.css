@@ -46,6 +46,7 @@
   position: absolute;
   bottom: 0;
   left: 0px;
+  overflow: hidden;
   animation: about-slide 0.6s ease-in-out forwards 1.3s;
 }
 .about-text-container {
@@ -61,6 +62,7 @@
   width: 50%;
   position: absolute;
   /*top: 0; */
+  overflow-y: hidden;
   right: 0px;
   animation: about-slide 0.6s ease-in-out forwards .9s;
   display: flex;
