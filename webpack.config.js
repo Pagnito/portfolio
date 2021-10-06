@@ -26,20 +26,24 @@ const config = {
         exclude: /\.module\.css$/,
       },
       {
-        test: /\.(svg|jpe?g|gif)$/,
-        use: "file-loader",
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
-      {
-        test: /\.png$/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              mimetype: "image/png",
-            },
-          },
-        ],
-      },
+      // {
+      //   test: /\.(svg|jpe?g|gif)$/,
+      //   use: "file-loader",
+      // },
+      // {
+      //   test: /\.png$/,
+      //   use: [
+      //     {
+      //       loader: "url-loader",
+      //       options: {
+      //         mimetype: "image/png",
+      //       },
+      //     },
+      //   ],
+      // },
       {
         test: /\.css$/,
         use: [

@@ -1,5 +1,5 @@
 import React, { useEffect, createRef } from "react";
-import ProjectVfa from "./project-vfa/project-vfa";
+// import ProjectVfa from "./project-vfa/project-vfa";
 import "./projects.scss";
 
 const Projects = () => {
@@ -32,7 +32,7 @@ const Projects = () => {
       </section>
       <div id="projects-intro-ani"></div>
       <section id="projects-projects">
-        <ProjectVfa />
+        {/* <ProjectVfa /> */}
       </section>
     </div>
   );
