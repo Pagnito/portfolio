@@ -56,6 +56,18 @@
     justify-content: flex-start;
   }
 }
+@media (max-width: 600px) {
+  #bounce-ball {
+    display: none !important;
+  }
+  .swing-door-container {
+    display: none !important;
+  }
+  #landing-pic-container {
+    animation: slide-in-graffiti 1s ease-in-out 0s forwards;
+  } 
+
+}
 @media (max-width: 460px) {
   #my-name {
     font-size: 40px !important;

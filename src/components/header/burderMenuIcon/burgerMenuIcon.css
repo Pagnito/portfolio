@@ -42,3 +42,12 @@
   transform: rotateZ(40deg) translateY(5px);
   transform-origin: right bottom;
 }
+@media (max-width: 600px) {
+  .bar-1 {
+    animation: slide-burger-menu .5s ease-in-out 1s forwards !important;
+  
+  }
+  .bar-2 {
+    animation: slide-burger-menu .5s ease-in-out 1s forwards !important;
+  }
+}
