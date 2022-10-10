@@ -35,7 +35,7 @@ const About = () => {
               P<span style={{ marginLeft: "-15px" }}>Y</span>
             </div>
             <div className="about-text about-text-one">
-              As you know by now I am Pavel. I live in providence Rhode Island, but I think I am a nomad at heart.
+              As you know by now I am Pavel. I live in Sugar Hill Georgia, but I think I am a nomad at heart.
             </div>
             <div className="about-text about-text-two">
               I know how to work with both backend and front end code. I primarily work with <span style={{ color: "lightgreen" }}>NodeJS</span> and{" "}
@@ -45,12 +45,12 @@ const About = () => {
               happy :)
             </div>
             <div className="about-text about-text-three">
-              I currently work for <span style={{ color: "red" }}>CVS</span> as a backend engineer supporting inventory and different order fulfilment systems.
+              I currently work for <span style={{ color: "red" }}>Buyers Edge Platform</span> as a frontend engineer.
             </div>
             <div className="about-text about-text-four">
               On my free time I like to ride my motorcycle, or electric longboard, hang out with friends and make love to music...ugh ugh I meant make music.
             </div>
-            <a href="/assets/resume-2021-pavel-yeganov.pdf" download="resume-2021-pavel-yeganov.pdf">
+            <a href="/assets/PavelYeganov-Resume-2022.pdf" download="PavelYeganov-Resume-2022.pdf">
               <button id="resume-button">Download Resume</button>
             </a>
           </div>
