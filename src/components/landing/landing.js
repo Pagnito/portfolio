@@ -57,7 +57,7 @@ const Landing = () => {
           </div>
         </div>
         <div className="intro-text show-landing-text">
-          <div id="my-title" >Full Stack Developer - Providence RI </div>
+          <div id="my-title" >Full Stack Developer - Sugar Hill GA </div>
           <div id="my-name"> I am<span style={{ color: "#ee3153" }}> Pavel Yeganov</span></div>
         </div>
       </div>
