@@ -335,6 +335,10 @@
   .show-landing-text {
     animation: appear-landing-text 1s ease-in-out .7s forwards !important;
   } 
+  .intro-text {
+    position: absolute;
+    left: 120px
+  }
 }
 @media (max-width: 800px) {
   #landing-section {

@@ -53,7 +53,15 @@ const Landing = () => {
         <div id="landing-pic-container">
           <img id="landing-pic" src="/assets/graffiti.jpg" />
           <div id="landing-pic-overlay">
-            Working On Projects that reflect my current skill level!
+              <a href="https://stopthecap.vercel.app" target="_blank" className="project-one">
+                <div className="project-one-text">
+                  <div className="">Stop The Cap
+                    <div className="project-one-line"></div>
+                  </div>
+                </div>
+
+              </a>
+
           </div>
         </div>
         <div className="intro-text show-landing-text">
