@@ -35,9 +35,13 @@
   width: 500px;
 }
 #landing-pic-container:hover #landing-pic-overlay {
+  display: flex;
   opacity: 1;
 }
 
+#landing-pic-container:hover #project-one {
+  border: 1px solid red;
+}
 
 .project-one {
   font-family: 'DM Serif Display', serif;
