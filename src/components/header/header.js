@@ -143,11 +143,7 @@ const Header = (props) => {
             <div className="header-mobile-link" onClick={pushToContacts}>
               CONTACT
             </div>
-            <img src="/assets/eye-icon.svg" id="header-eye-icon" />
-            <img onClick={pushToLanding} src="/assets/eyeball-icon.svg" id="header-eyeball-icon" />
-          </div>
-
-          <div id="header-mobile-social-links">
+            <div id="header-mobile-social-links">
             <a target="_blank" href="https://www.linkedin.com/in/pavel-yeganov-309269114/">
               <img className="header-mobile-social-icon" src="/assets/linkedin-icon.svg" />
             </a>
@@ -158,6 +154,11 @@ const Header = (props) => {
               <img className="header-mobile-social-icon" src="/assets/instagram-icon.svg" />
             </a>
           </div>
+            <img src="/assets/eye-icon.svg" id="header-eye-icon" />
+            <img onClick={pushToLanding} src="/assets/eyeball-icon.svg" id="header-eyeball-icon" />
+          </div>
+
+
         </div>
       </header>
     </>
