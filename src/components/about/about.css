@@ -1,11 +1,12 @@
 #about-section {
   width: 100%;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
   display: flex;
-  position: relative;
+  /* position: relative; */
   /* overflow-y: scroll; */
   /* margin-bottom: 100px; */
   
@@ -15,6 +16,7 @@
   position: absolute;
   width: 100%;
   display: flex;
+  overflow-y: scroll;
 }
 .about-slide-container {
   height: 100vh;
