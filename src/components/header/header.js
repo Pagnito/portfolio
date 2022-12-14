@@ -83,14 +83,14 @@ const Header = (props) => {
             </div>
           </Link>
 
-          {/* <Link to="/portfolio">
+          <Link to="/portfolio">
             <div className="header-link-container">
               <div style={{ width: props.location.pathname === "/portfolio" ? "100%" : "0%" }} className="header-link-ani"></div>
               <div className="header-link">
                 PORTFOLIO
               </div>
             </div>
-          </Link> */}
+          </Link>
 
           <Link to="/contact">
             <div className="header-link-container">
@@ -137,9 +137,9 @@ const Header = (props) => {
             <div className="header-mobile-link" onClick={pushToAbout}>
               ABOUT
             </div>
-            {/* <div className="header-mobile-link" onClick={pushToPortfolio}>
+            <div className="header-mobile-link" onClick={pushToPortfolio}>
               PORTFOLIO
-            </div> */}
+            </div>
             <div className="header-mobile-link" onClick={pushToContacts}>
               CONTACT
             </div>

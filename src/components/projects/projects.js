@@ -1,6 +1,7 @@
 import React, { useEffect, createRef } from "react";
-// import ProjectVfa from "./project-vfa/project-vfa";
+import StopTheCap from "./stopthcap/stopthecap";
 import "./projects.scss";
+import "./projects.css";
 
 const Projects = () => {
   let rendered = false;
@@ -32,7 +33,9 @@ const Projects = () => {
       </section>
       <div id="projects-intro-ani"></div>
       <section id="projects-projects">
-        {/* <ProjectVfa /> */}
+        <StopTheCap />
+        <div style={{paddingTop: '200px'}}></div>
+
       </section>
     </div>
   );

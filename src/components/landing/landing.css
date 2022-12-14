@@ -31,40 +31,9 @@
   font-size: 20px;
 }
 
-#landing-pic-container:hover {
-  width: 500px;
-}
-#landing-pic-container:hover #landing-pic-overlay {
-  display: flex;
-  opacity: 1;
-}
 
-#landing-pic-container:hover #project-one {
-  border: 1px solid red;
-}
 
-.project-one {
-  font-family: 'DM Serif Display', serif;
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  padding: 40px 0 40px 0;
-  width: 100%;
-  justify-items: center;
-  background-image: url('/assets/stopthecap-screenshot.png');
-  background-size: cover;
-  /* opacity: 0; */
-}
-.project-one-text{
-  display: flex;
-  cursor: pointer;
-  flex-direction: column;
-}
-.project-one-line {
-  border-top: 8px #EE3254 solid;
-  margin-top: -25px;
-  z-index: 10;
-}
+
 @media (max-width: 800px) {
   #landing-pic-container {
     margin-right: 10px;
@@ -84,9 +53,7 @@
   #landing-section {
     justify-content: flex-start;
   }
-  #landing-pic-container:hover {
-    width: 80%;
-  }
+
 }
 @media (max-width: 600px) {
   #bounce-ball {
