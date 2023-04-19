@@ -201,11 +201,11 @@ const Contact = ({ reference, scrolled }) => {
         <div id="contact-info">
           <div id="contact-email">
             <div id="contact-email-title">Email</div>
-            <div id="contact-email-text">pavelyeganov@gmail.com</div>
+            <div id="contact-email-text">matrix@palivion.mailer.me</div>
           </div>
           <div id="contact-phone">
             <div id="contact-phone-title">Phone</div>
-            <div id="contact-phone-text">+1 774-360-2363</div>
+            <div id="contact-phone-text">+1 401 536 3906</div>
           </div>
         </div>
         <div id="contact-form-container">
